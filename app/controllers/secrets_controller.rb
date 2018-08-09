@@ -3,8 +3,11 @@ class SecretsController < ApplicationController
 
   def show
   end
+
   private
+
   def require_login
     return redirect_to login_path unless session.include? :name
   end
+  
 end
